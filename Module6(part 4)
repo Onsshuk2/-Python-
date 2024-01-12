@@ -1,0 +1,49 @@
+import math
+
+def sum(x, y):
+    return x + y
+
+def subtraction(x, y):
+    return x - y
+
+def multiplication(x, y):
+    return x * y
+
+def division(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Enter corect number,becouse cannot be divided by zero"
+
+def sqrt(x):
+    return math.sqrt(x)
+
+def factorial(x):
+    return math.factorial(x)
+
+def pow(x, y):
+    return math.pow(x, y)
+
+print("Enter operation: 1 - sum, 2 - subtraction,3 - multiplication, 4 - division, 5 - sqrt, 6 - factorial, 7 - pow.")
+
+operation = input("Enter operation:  ")
+
+if operation in ['1', '2', '3', '4', '5', '7']:
+   num1 = int(input("Enter number1: "))
+num2 = int(input("Enter number2: "))
+if operation == "1":
+    print(f"Sum: {sum(num1, num2)}")
+elif operation == "2":
+    print(f"Subtraction: {subtraction(num1, num2)}")
+elif operation == "3":    
+    print(f"Multiplication: {multiplication(num1, num2)}")
+elif operation == "4":
+    print(f"Division: {division(num1, num2)}")
+elif operation == "5":
+    print(f"Sqrt: {sqrt(num1)}")
+elif operation == "6":    
+    print(f"Factorial: {factorial(int(num2))}")
+elif operation == "7":
+    print(f"Power: {pow(num1, num2)}")
+else:
+    print("Enter corect operation")
